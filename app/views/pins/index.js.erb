@@ -1,0 +1,8 @@
+
+$('#pins').append("<%=j render(partial: 'pin', collection: @pins, format: 'html') %>");
+
+<% if @pins.current_page == @pins.total_pages %>
+  $('#view-more').remove();
+<% else %>
+  $('#view-more a').attr('href', '<%= url_for(page: @pins.current_page + 1) %>');
+<% end %>

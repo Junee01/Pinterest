@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: sangjun1010
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: Pinterest_Junee01
+
+test:
+  <<: *default
+  database: Pinterest_Junee01_test
+
+production:
+  <<: *default
+  database: Pinterest_Junee01_production
+  username: Pinterest_Junee01
+  password: <%= ENV['PINTEREST_JUNEE01_DATABASE_PASSWORD'] %>

@@ -1,0 +1,9 @@
+<div class="transitions-enabled" id="pins">
+	<%= render(partial: 'pin', collection: @pins) %>
+</div>
+
+<% unless @pins.current_page == @pins.total_pages %>
+  <p id="view-more">
+    <%= link_to('View More', url_for(page: @pins.current_page + 1), remote: true) %>
+  </p>
+<% end %>

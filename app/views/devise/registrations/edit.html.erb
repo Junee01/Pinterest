@@ -1,0 +1,54 @@
+<div class="col-md-6 col-md-offset-2">
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2><strong>사용자 정보를 수정하세요!</strong></h2>
+      </div>
+
+      <div class="panel-body">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
+
+          <div class="form-group">
+            <%= f.label :name, "* 이름" %>
+            <%= f.text_field :name, class: "form-control", :autofocus => true %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :email,label: "이메일 주소", required: true, autofocus: true, input_html: { class: 'form-control' } %>
+          </div>
+
+          <div class="form-group">
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :password, label: "비밀번호 입력", autocomplete: "off", hint: "비밀번호 변경을 원하지 않으면 빈칸으로 남겨두세요.", required: false, input_html: { class: 'form-control'} %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :password_confirmation, label: "비밀번호 입력 확인", required: false, input_html: { class: 'form-control' } %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :current_password, label: "현재 비밀번호 입력", hint: "회원 정보 수정을 원하시면, 현재 비밀번호를 입력해주세요.", required: true, input_html: { class: 'form-control' } %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "수정하기", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+        </div>
+
+        <div class="panel-footer">
+
+          <p>Unhappy? <%= link_to "회원 탈퇴할래요!", registration_path(resource_name), data: { confirm: "정말로? 진짜루?" }, method: :delete %></p>
+
+          <%= link_to "돌아가기", :back %>
+        </div>       
+    </div>
+  <div>
+</div>
+
