@@ -9,10 +9,10 @@
 		%nav.navbar.navbar-default
 			.container
 				.navbar-brand= link_to "@Pinterest@ =ㅅ=;;", root_path, method: :get
-				= form_tag search_pins_path, method: :get, class: "navbar-form navbar-right", role: "search" do
-					%p
-						= text_field_tag :search, params[:search], class: "form-control"
-						= submit_tag "Pin 검색", name: nil, class: "btn btn-success"
+				/ = form_tag search_pins_path, method: :get, class: "navbar-form navbar-right", role: "search" do
+				/ 	%p
+				/ 		= text_field_tag :search, params[:search], class: "form-control"
+				/ 		= submit_tag "Pin 검색", name: nil, class: "btn btn-success"
 				- if user_signed_in?
 					%ul.nav.navbar-nav.navbar-right
 						%li= link_to "Pin 공유", new_pin_path
