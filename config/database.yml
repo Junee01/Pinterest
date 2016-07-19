@@ -1,21 +1,42 @@
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: 5
+#   username: root
+#   password: sangjun1010
+#   socket: /tmp/mysql.sock
+# default: &default
+#   adapter: sqlite3
+#   pool: 5
+#   timeout: 5000
+
+# development:
+#   <<: *default
+#   database: Pinterest_Junee01
+
+# test:
+#   <<: *default
+#   database: Pinterest_Junee01_test
+
+# production:
+#   <<: *default
+#   database: Pinterest_Junee01
+#   username: Pinterest_Junee01
+#   password: <%= ENV['PINTEREST_JUNEE01_DATABASE_PASSWORD'] %>
+
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  adapter: sqlite3
   pool: 5
-  username: root
-  password: sangjun1010
-  socket: /tmp/mysql.sock
+  timeout: 5000
 
 development:
   <<: *default
-  database: Pinterest_Junee01
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  database: Pinterest_Junee01_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: Pinterest_Junee01
-  username: Pinterest_Junee01
-  password: <%= ENV['PINTEREST_JUNEE01_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3
