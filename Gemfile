@@ -18,7 +18,6 @@ gem 'devise', '~> 4.2'
 gem 'paperclip', '~> 5.0'
 #gem 'aws-sdk', '< 2.0'
 gem 'acts_as_votable', '~> 0.10.0'
-gem 'searchkick', '~> 1.3', '>= 1.3.1'
 gem 'will_paginate', '~> 3.1'
 gem 'masonry-rails', '~> 0.2.4'
 
@@ -30,6 +29,7 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'mysql2', '>= 0.3.13', '< 0.5'
+  gem 'searchkick', '~> 1.3', '>= 1.3.1'
 end
 
 group :production do
