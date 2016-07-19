@@ -1,8 +1,13 @@
+$boxes = $('<%= j render(@pins) %>')
 
-$('#pins').append("<%=j render(partial: 'pin', collection: @pins, format: 'html') %>");
-
-<% if @pins.current_page == @pins.total_pages %>
-  $('#view-more').remove();
+$('#pins').append($boxes).imagesLoaded( function(){
+	$('#pins').masonry('reload');
+});
+<% if @pins.next_page %>
+	$('.pagination').replaceWith('<%= j will_paginate(@pins) %>');
 <% else %>
-  $('#view-more a').attr('href', '<%= url_for(page: @pins.current_page + 1) %>');
+	$(window).off('scroll');
+	$('.pagination').remove();
 <% end %>
+
+$('#pins').masonry( 'appended', $boxes, true)

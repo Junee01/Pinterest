@@ -12,7 +12,8 @@ class PinsController < ApplicationController
 	end
 
 	def index
-		@pins = Pin.all.order("created_at DESC").page(params[:page]).per(5)
+		@pins = Pin.all.order("created_at DESC")
+		@pins = @pins.page(params[:page]).per_page(8)
 	end
 
 	def show

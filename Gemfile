@@ -19,8 +19,8 @@ gem 'masonry-rails', '~> 0.2.4'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'aws-sdk', '< 2.0'
 gem 'searchkick', '~> 1.3', '>= 1.3.1'
-#gem 'will_paginate', '~> 3.1'
-gem 'kaminari', '~> 0.17.0'
+gem 'will_paginate', '~> 3.1'
+# gem 'kaminari', '~> 0.17.0'
 
 group :development, :test do
   gem 'byebug'

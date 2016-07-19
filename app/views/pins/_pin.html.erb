@@ -1,3 +1,20 @@
 <div class="box panel panel-default">
 	<%= link_to (image_tag pin.image.url), pin %>
+	<h2><strong><%= link_to pin.title, pin %></strong></h2>
+	<p>
+		<% if pin.description[21].nil? %>
+			"<%= pin.description[0..20] %>"
+		<% else %>
+			"<%= pin.description[0..20] + "..." %>"
+		<% end %>
+	</p>
+	<p class="user">
+		<%= pin.user.name %>
+		<%= time_ago_in_words(pin.updated_at) %>전에 작성됨
+	</p>
+	<% if pin.get_upvotes.size != 0 %>
+	<p>
+		<strong><%= pin.get_upvotes.size %>명이 이 글을 좋아합니다.</strong>
+	</p>
+	<% end %>
 </div>
