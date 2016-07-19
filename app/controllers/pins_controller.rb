@@ -13,7 +13,7 @@ class PinsController < ApplicationController
 
 	def index
 		@pins = Pin.all.order("created_at DESC")
-		@pins = @pins.page(params[:page]).per_page(3)
+		@pins = @pins.page(params[:page]).per_page(6)
 	end
 
 	def show
