@@ -3,17 +3,17 @@ class PinsController < ApplicationController
 	before_filter :authenticate_user!, except: [:index, :show]
 	before_action :authorized_user, only: [:edit, :update, :destroy]
 
-	# def search
-	# 	if params[:search].present?
-	# 		@pins = Pin.search(params[:search])
-	# 	else
-	# 		@pins = Pin.all
-	# 	end
-	# end
+	def search
+		if params[:search].present?
+			@pins = Pin.search(params[:search])
+		else
+			@pins = Pin.all
+		end
+	end
 
 	def index
 		@pins = Pin.all.order("created_at DESC")
-		@pins = @pins.page(params[:page]).per_page(6)
+		@pins = @pins.page(params[:page]).per_page(8)
 	end
 
 	def show

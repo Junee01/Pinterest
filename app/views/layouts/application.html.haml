@@ -8,6 +8,10 @@
 	%body
 		%nav.navbar.navbar-default
 			.container
+				= form_tag search_pins_path, method: :get, class: "navbar-form navbar-right", role: "search" do
+					%p
+						= text_field_tag :search, params[:search], class: "form-control"
+						= submit_tag "Pin 검색", name: nil, class: "btn btn-success"
 				.navbar-brand= link_to "@Pinterest@ =ㅅ=;;", root_path, method: :get
 				- if user_signed_in?
 					%ul.nav.navbar-nav.navbar-right
