@@ -1,14 +1,14 @@
 !!! 5
 %html
 	%head
-		%title Pinterest =ㅅ=;;
+		%title Pinterest
 		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
 		= csrf_meta_tags
 	%body
 		%nav.navbar.navbar-default
 			.container
-				.navbar-brand= link_to "@Pinterest@ =ㅅ=;;", root_path
+				.navbar-brand= link_to "@Pinterest@ =ㅅ=;;", root_path, method: :get
 				= form_tag search_pins_path, method: :get, class: "navbar-form navbar-right", role: "search" do
 					%p
 						= text_field_tag :search, params[:search], class: "form-control"
@@ -27,4 +27,4 @@
 			- flash.each do |name, msg|
 				= content_tag :div, msg, class: "alert alert-info"
 			
-			= yield
+		= yield

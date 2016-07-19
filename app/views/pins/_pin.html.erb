@@ -9,12 +9,12 @@
 		<% end %>
 	</p>
 	<p class="user">
-		<%= pin.user.name %>
-		<%= time_ago_in_words(pin.updated_at) %>전에 작성됨
+		(<%= pin.user.name %>,
+		<%= time_ago_in_words(pin.updated_at) %> 전)
 	</p>
 	<% if pin.get_upvotes.size != 0 %>
-	<p>
-		<strong><%= pin.get_upvotes.size %>명이 이 글을 좋아합니다.</strong>
-	</p>
+		<p>
+			<strong><%= pin.get_upvotes.size %></strong>명이 이 글을 좋아합니다.
+		</p>
 	<% end %>
 </div>

@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @pin, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @pin, notice: '소중한 의견 감사합니다!' }
         format.json { render json: @comment, status: :created, location: @comment }
       else
         format.html { render action: "new" }
@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to :back, notice: '댓글이 삭제되었습니다!' }
       format.json { head :no_content }
     end
   end

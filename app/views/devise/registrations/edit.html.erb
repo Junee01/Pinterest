@@ -1,4 +1,4 @@
-<div class="col-md-6 col-md-offset-2">
+<div class="col-md-6 col-md-offset-3">
   <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -44,7 +44,7 @@
 
         <div class="panel-footer">
 
-          <p>Unhappy? <%= link_to "회원 탈퇴할래요!", registration_path(resource_name), data: { confirm: "정말로? 진짜루?" }, method: :delete %></p>
+          <p>탈퇴하고 싶으신가요? <%= link_to "회원 탈퇴하러 가기", registration_path(resource_name), data: { confirm: "정말로? 진짜루?" }, method: :delete %></p>
 
           <%= link_to "돌아가기", :back %>
         </div>       

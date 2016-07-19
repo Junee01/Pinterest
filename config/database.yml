@@ -16,6 +16,6 @@ test:
 
 production:
   <<: *default
-  database: Pinterest_Junee01_production
+  database: Pinterest_Junee01
   username: Pinterest_Junee01
   password: <%= ENV['PINTEREST_JUNEE01_DATABASE_PASSWORD'] %>
