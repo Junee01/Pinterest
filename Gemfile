@@ -29,7 +29,7 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'mysql2', '>= 0.3.13', '< 0.5'
-  gem 'searchkick', '~> 1.3', '>= 1.3.1'
+  #gem 'searchkick', '~> 1.3', '>= 1.3.1'
 end
 
 group :production do
