@@ -5,13 +5,13 @@ This App made by Ruby on Rails 4.2.7 and I learned skills by Mackenzie Child Cod
 Following is about this Application :
 
 * Ruby version
--> 2.3.0
+- 2.3.0
 
 * System dependencies
--> Mac OS X Capitan
+- Mac OS X Capitan
 
 * Database
--> Mysql standard.
+- Mysql standard.
 
 * Services (job queues, cache servers, search engines, etc.)
 
@@ -23,16 +23,16 @@ Following is about this Application :
 
 * 루비 버전과 그 이외의 잼 버전 소개
 
-ruby '2.3.0'
+- ruby '2.3.0'
 
-'mysql2', '>= 0.3.13', '< 0.5'
-'searchkick', '~> 1.3', '>= 1.3.1'
-'rails', '4.2.7'
-'haml', '~> 4.0', '>= 4.0.7'
-'simple_form', '~> 3.2', '>= 3.2.1'
-'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-'devise', '~> 4.2'
-'paperclip', '~> 5.0'
-'acts_as_votable', '~> 0.10.0'
-'will_paginate', '~> 3.1'
-'masonry-rails', '~> 0.2.4'
+- 'mysql2', '>= 0.3.13', '< 0.5'
+- 'searchkick', '~> 1.3', '>= 1.3.1'
+- 'rails', '4.2.7'
+- 'haml', '~> 4.0', '>= 4.0.7'
+- 'simple_form', '~> 3.2', '>= 3.2.1'
+- 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+- 'devise', '~> 4.2'
+- 'paperclip', '~> 5.0'
+- 'acts_as_votable', '~> 0.10.0'
+- 'will_paginate', '~> 3.1'
+- 'masonry-rails', '~> 0.2.4'
