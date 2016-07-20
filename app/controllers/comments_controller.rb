@@ -1,6 +1,9 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
+  #new, edit, show 는 필요하지 않아서 제거하였습니다. (scaffold로 자동 생성된 것들.)
+  #We don't need new, edit, show(by scaffold) for comments controller in this project.
+
   def create
     @pin = Pin.find(params[:pin_id])
     @comment = @pin.comments.new(comment_params)

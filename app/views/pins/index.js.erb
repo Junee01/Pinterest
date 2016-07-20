@@ -1,11 +1,10 @@
+//모든 pin을 불러와 boxes에 담습니다.
 $boxes = $('<%= j render(@pins) %>')
-
+//id=pins인 곳에서 boxes들의 이미지를 추가하는데, masonry 기능을 넣어서 합니다.
 $('#pins').append($boxes).imagesLoaded( function(){
 	$('#pins').masonry('reload');
 });
-
-$('#pins').masonry('reload');
-
+//각각의 페이지는 will_paginate로 나누어져 있는데, 그 것을 기준으로 next_page를 결정하고, scroll이 더이상 없으면, 페이지네이션 효과를 제거합니다.
 <% if @pins.next_page %>
 	$('.pagination').replaceWith('<%= j will_paginate(@pins) %>');
 <% else %>

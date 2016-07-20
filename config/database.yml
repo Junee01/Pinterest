@@ -8,7 +8,7 @@ default: &default
 
 development:
   <<: *default
-  database: Pinterest_Junee01
+  database: Pinterest
 
 test:
   <<: *default

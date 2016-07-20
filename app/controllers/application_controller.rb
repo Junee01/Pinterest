@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  #If you are using devise and added something for example name, then you need following sources.
+  #Devise 잼을 이용하고, 회원 정보에 추가적인 요소를 넣으려면 다음과 같은 문장이 필요합니다.
 	protected
 
 	def configure_permitted_parameters

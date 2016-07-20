@@ -1,3 +1,4 @@
+-#이 페이지는 복잡하여 haml로 작성되었습니다. 전체에 기본적으로 적용되는 레이아웃페이지 입니다.
 !!! 5
 %html
 	%head
@@ -8,11 +9,14 @@
 	%body
 		%nav.navbar.navbar-default
 			.container
+				-#Search bar 부분입니다.
 				= form_tag search_pins_path, method: :get, class: "navbar-form navbar-right", role: "search" do
 					%p
 						= text_field_tag :search, params[:search], class: "form-control"
 						= submit_tag "Pin 검색", name: nil, class: "btn btn-success"
+				-#root로 가는 제목 부분입니다.
 				.navbar-brand= link_to "@Pinterest@ =ㅅ=;;", root_path, method: :get
+				-#로그인된 회원과 아닌 사람이 보는 페이지가 다릅니다.
 				- if user_signed_in?
 					%ul.nav.navbar-nav.navbar-right
 						%li= link_to "Pin 공유", new_pin_path
@@ -25,4 +29,5 @@
 		.container
 			- flash.each do |name, msg|
 				= content_tag :div, msg, class: "alert alert-info"
+		-#앞으로 추가되는 부분은 아래 yield에 적용됩니다.
 		= yield

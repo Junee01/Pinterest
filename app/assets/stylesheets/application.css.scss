@@ -116,6 +116,10 @@ textarea {
 	min-height: 250px;
 }
 
+/*
+댓글에만 적용되는 textarea를 만들기 위해서 추가하였습니다.
+textarea css only for users's comments.
+*/
 .comment {
 	min-height: 10px;
 }

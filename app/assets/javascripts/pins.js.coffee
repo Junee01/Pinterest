@@ -2,12 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+#This is Javascript scripts for loading masonry.
 $ ->
   $('#pins').imagesLoaded ->
     $('#pins').masonry
       itemSelector: '.box'
       isFitWidth: true
 
+#This is jQuery function for infinite scrolling.
 jQuery ->
 	if $('.pagination').length
 		$(window).scroll ->
